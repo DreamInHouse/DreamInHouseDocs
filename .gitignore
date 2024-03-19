@@ -1,0 +1,8 @@
+# Latex Auxiliary Files
+*.aux
+*.toc
+*.lof
+*.log
+
+# Latex Output Files
+*.pdf

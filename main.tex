@@ -1,0 +1,54 @@
+% --- Document: Preamble ---
+\documentclass{article}
+% Document Info
+\title{{\Huge Dream InHouse}}
+\author{
+    Chrystian M. Franklin\\
+    Mariana G. M. Morais\\
+    Renato S. A. Ribeiro\\
+    Richard M. C. Pinto\\
+    Willians H. S. Silva
+}
+\date{2024}
+
+% Subfiles Support
+\usepackage{subfiles}
+
+% Graphics Support
+\usepackage{graphicx}
+\graphicspath{{./assets/}}
+
+% --- Document: Start ---
+\begin{document}
+% Title Page
+\maketitle
+\pagebreak
+% Acknowledgements
+\section*{Agradecimentos}
+\pagebreak
+% Table of Figures
+\listoffigures
+\pagebreak
+% Table of Contents
+\tableofcontents
+\pagebreak
+% Introduction
+\subfile{sections/introduction}
+\pagebreak
+% Cronogram
+\subfile{sections/cronogram}
+\pagebreak
+% Project Specifications
+\subfile{sections/specifications}
+\pagebreak
+% Design
+\subfile{sections/design}
+\pagebreak
+% Development
+\subfile{sections/development}
+\pagebreak
+% Closing Remarks
+\subfile{sections/closing-remarks.tex}
+% --- Document: End ---
+\end{document}
+
