@@ -1,8 +1,10 @@
 # Latex Auxiliary Files
 *.aux
-*.toc
 *.lof
 *.log
+*.out
+*.toc
+*.aux
 
 # Latex Output Files
 *.pdf
