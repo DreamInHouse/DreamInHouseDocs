@@ -9,7 +9,49 @@
 \usepackage[scaled]{helvet}
 \renewcommand\familydefault{\sfdefault}
 \usepackage[T1]{fontenc}
+\usepackage[portuguese]{babel}
+\addto\extrasportuguese{
+    \renewcommand{\contentsname}{\centering{Sumário}}{\vspace{1cm}}
+}
+\addto\extrasportuguese{
+    \renewcommand{\listfigurename}{\centering{Figuras}}{\vspace{1cm}}
+}
 
+% Margins, Columns, Indentation & Spacing
+\usepackage{multicol}
+\usepackage{indentfirst}
+\usepackage{ragged2e}  % For extendability
+\usepackage{setspace}
+\onehalfspacing
+\setlength{\columnsep}{1cm}
+
+% Headers, Titles, Footnotes & Captioning
+\usepackage{sectsty}
+\usepackage{titling}
+\renewcommand\maketitlehooka{\null\mbox{}\vfill}
+\renewcommand\maketitlehookd{\vfill\null}
+\usepackage{footmisc}
+\usepackage{caption}
+\captionsetup[figure]{font=footnotesize}
+
+% URL Support
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=black,
+    filecolor=magenta,
+    urlcolor=cyan,
+    pdftitle={Dream InHouse - Documentação},
+    pdfpagemode=FullScreen,
+}
+\urlstyle{same}
+
+% Pagestyle
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot[R]{\thepage}
+\renewcommand{\headrulewidth}{0pt}
 
 % Document Info
 \title{{\Huge Dream InHouse}}
