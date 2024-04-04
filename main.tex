@@ -7,17 +7,6 @@
 
 \usepackage{minted}
 
-% Document Info
-\title{{\Huge Dream InHouse}}
-\author{
-    Chrystian M. Franklin\\
-    Mariana G. M. Morais\\
-    Renato S. A. Ribeiro\\
-    Richard M. C. Pinto\\
-    Willians H. S. Silva
-}
-\date{2024}
-
 % Subfiles Support
 \usepackage{subfiles}
 
@@ -73,10 +62,54 @@
 \fancyfoot[R]{\thepage}
 \renewcommand{\headrulewidth}{0pt}
 
+% Document Info
+\title{{\Huge Dream InHouse}}
+\author{
+}
+\date{2024}
+
 % --- Document: Start ---
 \begin{document}
 % Title Page
-\maketitle
+\begin{titlingpage}
+    \begin{center}
+        \large
+            % Institution
+            {\Huge
+                FATEC -- Prof. Waldomiro May
+            }\\
+            Análise e Desenvolvimento de Sistemas
+
+            % Project Logo
+            \vspace{3cm}
+            \raisebox{-0.75em}{
+                \includegraphics[scale=1.25]{logo/main.png}
+            }
+
+            % Project Name
+            \vspace{1cm}
+            {\Huge
+                Dream InHouse
+            }
+
+            % Project Description
+            Rede Social de Nicho Imobiliário
+
+            % Authors
+            \vspace{5cm}
+            {
+                Chrystian M. Franklin\\
+                Mariana G. M. Morais\\
+                Richard M. C. Pinto\\
+                Willians H. S. Silva
+            }
+
+            % Date
+            \vspace{2cm}
+            2024
+        \normalsize
+    \end{center}
+\end{titlingpage}
 \pagebreak
 % Acknowledgements
 \begin{centering}
