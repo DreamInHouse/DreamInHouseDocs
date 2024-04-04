@@ -5,6 +5,7 @@
 *.out
 *.toc
 *.aux
+_minted-main/
 
 # Latex Output Files
 *.pdf
