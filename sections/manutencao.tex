@@ -1,0 +1,106 @@
+% --- Document: Preamble ---
+\documentclass[../main.tex]{subfiles}
+\graphicspath{{\subfix{../assets/}}}
+% --- Document: Start ---
+\begin{document}
+% Implantação e Manutenção
+\section{Implantação e Manutenção}
+
+A implantação e a manutenção são fases críticas no ciclo de vida de um sistema de software. Elas garantem que o sistema seja disponibilizado para uso de maneira eficiente e que continue operando corretamente ao longo do tempo. Nesta seção, detalhamos os procedimentos necessários para a implantação do sistema, bem como as estratégias de manutenção que serão adotadas para assegurar sua estabilidade e evolução contínua.
+
+A implantação envolve a preparação e configuração do ambiente de produção, a migração de dados, a verificação da funcionalidade do sistema e a sua liberação para os usuários finais. Este processo é essencial para garantir que o sistema funcione conforme o esperado em um ambiente real.
+
+Por outro lado, a manutenção é responsável por monitorar e atualizar o sistema após a implantação. Isso inclui a correção de erros, a otimização de desempenho, a adição de novas funcionalidades e a adaptação do sistema a mudanças nos requisitos ou no ambiente operacional.
+
+A seguir, dividimos esta seção em duas partes principais para abordar detalhadamente cada um desses aspectos fundamentais:
+
+\subsection{Procedimento de Implantação}
+
+A implantação do sistema foi planejada para ser multiplataforma, garantindo a compatibilidade com os principais sistemas operacionais de desktop: Linux, macOS e Windows. A seguir, detalhamos as etapas e os requisitos técnicos necessários para a implantação bem-sucedida do sistema:
+
+\subsubsection{Ambiente Multiplataforma}
+
+O sistema foi desenvolvido para operar em três ambientes de desktop principais: Linux, macOS e Windows. Esta abordagem assegura que usuários de diferentes plataformas possam utilizar o sistema sem restrições. Para garantir a compatibilidade e a funcionalidade consistente em todos esses sistemas, os seguintes componentes foram utilizados:
+
+\begin{itemize}
+    \item \textbf{Linux}: O sistema foi testado em diversas distribuições populares de Linux para assegurar a compatibilidade ampla. As instruções de instalação e configuração foram adaptadas para atender as particularidades de cada distribuição.
+    \item \textbf{macOS}: A implantação no macOS envolveu a configuração de permissões e a adaptação do sistema para as especificidades do ambiente macOS, garantindo uma experiência de usuário integrada e fluida.
+    \item \textbf{Windows}: No Windows, foram feitas otimizações para assegurar que o sistema funcione perfeitamente em diferentes versões do sistema operacional, desde o Windows 7 até o Windows 10.
+\end{itemize}
+
+\subsubsection{Tecnologias Utilizadas}
+
+A implantação do sistema exige a instalação e configuração de várias tecnologias fundamentais:
+
+\begin{itemize}
+    \item \textbf{Java Development Kit (JDK) 17}: O sistema foi desenvolvido utilizando a versão 17 do JDK. Esta versão do JDK foi escolhida por suas melhorias de performance, segurança e novas funcionalidades. É necessário instalar o JDK 17 em todos os sistemas onde o software será implantado.
+    \item \textbf{Apache Maven}: Utilizamos o Maven como ferramenta de gerenciamento e automação de builds. Maven simplifica a gestão de dependências e facilita a construção, teste e implantação do sistema. Para a implantação, é necessário ter o Maven configurado corretamente no ambiente de desenvolvimento e produção.
+\end{itemize}
+
+\subsubsection{Passos para Implantação}
+
+Para implantar o sistema, siga os passos abaixo:
+
+\begin{itemize}
+    \item \textbf{Instalação do JDK 17}: Baixe e instale o JDK 17 apropriado para o seu sistema operacional a partir do site oficial da Oracle ou de outros distribuidores confiáveis.
+    \item \textbf{Configuração do Maven}: Instale o Maven e configure as variáveis de ambiente necessárias (\texttt{MAVEN\_HOME} e \texttt{PATH}) para garantir que o Maven possa ser executado a partir da linha de comando.
+    \item \textbf{Clonagem do Repositório}: Clone o repositório do projeto utilizando um cliente Git ou a linha de comando.
+    \item \textbf{Build do Projeto}: Navegue até o diretório raiz do projeto e execute o comando `mvn clean install` para construir o projeto e resolver todas as dependências.
+    \item \textbf{Execução do Sistema}: Após o build bem-sucedido, navegue até o diretório `target` e execute o arquivo jar gerado utilizando o comando `java -jar nome-do-arquivo.jar`.
+\end{itemize}
+
+Seguindo esses passos, o sistema estará pronto para uso em qualquer uma das plataformas suportadas, garantindo uma experiência de usuário consistente e funcional.
+
+
+\subsection{Plano de Manutenção}
+
+A manutenção do sistema é essencial para garantir sua longevidade e adaptabilidade a novas necessidades e tecnologias. Para gerenciar as atualizações e manutenções, utilizamos o sistema de controle de versão Git. A seguir, detalhamos nosso plano de manutenção.
+
+\subsubsection{Controle de Versão com Git}
+
+O Git é um sistema de controle de versão distribuído que nos permite rastrear mudanças no código, colaborar com outros desenvolvedores e gerenciar diferentes versões do projeto de forma eficiente.
+
+\subsubsection{Fluxo de Trabalho (Branching)}
+
+Adotamos um fluxo de trabalho baseado em branches para organizar e gerenciar as mudanças no código. As principais branches utilizadas são:
+
+\begin{itemize}
+    \item \textbf{main}: Branch principal que contém o código de produção estável.
+    \item \textbf{develop}: Branch de desenvolvimento onde todas as novas funcionalidades e correções são integradas antes de serem movidas para a branch \texttt{main}.
+    \item \textbf{feature/*}: Branches temporárias criadas para desenvolver novas funcionalidades. Cada nova funcionalidade recebe uma branch própria com o prefixo \texttt{feature/}.
+    \item \textbf{bugfix/*}: Branches temporárias criadas para corrigir bugs. Cada correção de bug recebe uma branch própria com o prefixo \texttt{bugfix/}.
+    \item \textbf{release/*}: Branches temporárias utilizadas para preparar novas versões para lançamento. Essas branches recebem o prefixo \texttt{release/}.
+    \item \textbf{hotfix/*}: Branches criadas a partir da \texttt{main} para correções urgentes em produção. Essas branches recebem o prefixo \texttt{hotfix/}.
+\end{itemize}
+
+\subsubsection{Procedimentos de Atualização}
+
+Para garantir uma manutenção eficiente, seguimos os seguintes procedimentos de atualização:
+
+\begin{enumerate}
+    \item \textbf{Criação de Branches}: Para cada nova funcionalidade ou correção de bug, crie uma nova branch a partir de \texttt{develop} (para funcionalidades) ou \texttt{main} (para correções urgentes).
+    \item \textbf{Desenvolvimento e Testes}: Desenvolva as mudanças na branch criada e realize testes unitários e de integração para assegurar a qualidade do código.
+    \item \textbf{Pull Request (PR)}: Abra um pull request para a branch \texttt{develop}. Um revisor deve avaliar o código antes da integração.
+    \item \textbf{Integração}: Após a aprovação do PR, integre a branch na \texttt{develop}. Para correções urgentes, integre na \texttt{main} e depois sincronize com a \texttt{develop}.
+    \item \textbf{Lançamento de Versões}: Quando a \texttt{develop} estiver estável e pronta para lançamento, crie uma branch \texttt{release}, finalize os testes e documentações, e depois integre na \texttt{main}.
+    \item \textbf{Documentação}: Atualize a documentação do projeto com as mudanças realizadas.
+\end{enumerate}
+
+\subsubsection{Boas Práticas}
+
+Para garantir a eficácia da manutenção, adotamos as seguintes boas práticas:
+
+\begin{itemize}
+    \item \textbf{Commits Frequentes}: Realize commits frequentes e com mensagens descritivas para facilitar o rastreamento de mudanças.
+    \item \textbf{Revisões de Código}: Todo código deve passar por revisão antes de ser integrado à branch \texttt{develop} ou \texttt{main}.
+    \item \textbf{Automação de Testes}: Utilize ferramentas de automação de testes para garantir que as mudanças não introduzam novos bugs.
+    \item \textbf{Documentação}: Mantenha a documentação do projeto sempre atualizada com as mudanças realizadas.
+    \item \textbf{Backup Regular}: Realize backups regulares do repositório para evitar perda de dados.
+\end{itemize}
+
+Seguindo este plano de manutenção, garantimos que o sistema permaneça atualizado, estável e seguro, permitindo sua evolução contínua e adaptação a novas demandas.
+
+
+% --- Document: End ---
+\end{document}
+
