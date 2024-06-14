@@ -276,11 +276,11 @@ INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/psnfss/ts1phv.fd
 INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/psnfss/ts1phv.fd
 INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/psnfss/ts1phv.fd
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/adobe/helvetic/phvr8c.tfm
-INPUT ./assets/diagrams/diagrama_de_classes.jpg
-INPUT ./assets/diagrams/diagrama_de_classes.jpg
-INPUT ./assets/diagrams/diagrama_de_classes.jpg
-INPUT ./assets/diagrams/diagrama_de_classes.jpg
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/vf/adobe/helvetic/phvr8c.vf
+INPUT ./assets/diagrams/diagrama_de_classes.jpg
+INPUT ./assets/diagrams/diagrama_de_classes.jpg
+INPUT ./assets/diagrams/diagrama_de_classes.jpg
+INPUT ./assets/diagrams/diagrama_de_classes.jpg
 INPUT ./assets/diagrams/diagrama_de_sequencia.jpg
 INPUT ./assets/diagrams/diagrama_de_sequencia.jpg
 INPUT ./assets/diagrams/diagrama_de_sequencia.jpg
