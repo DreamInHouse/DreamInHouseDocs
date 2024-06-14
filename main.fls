@@ -248,14 +248,6 @@ INPUT sections/requisitos.tex
 INPUT ./sections/requisitos.tex
 INPUT ./sections/requisitos.tex
 INPUT sections/requisitos.tex
-INPUT ./main.toc
-INPUT main.toc
-INPUT main.toc
-OUTPUT main.toc
-INPUT ./main.lof
-INPUT main.lof
-INPUT main.lof
-OUTPUT main.lof
 INPUT ./assets/diagrams/requisitosfuncionais.png
 INPUT ./assets/diagrams/requisitosfuncionais.png
 INPUT ./assets/diagrams/requisitosfuncionais.png
